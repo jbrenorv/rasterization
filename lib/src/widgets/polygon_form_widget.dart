@@ -1,11 +1,12 @@
-import 'package:rasterization/src/bloc/home_bloc.dart';
-import 'package:rasterization/src/entity/polygon.dart';
-import 'package:rasterization/src/entity/polygon_vertex_form_entity.dart';
-import 'package:rasterization/src/entity/ppoint.dart';
-import 'package:rasterization/src/widgets/control_button_widget.dart';
-import 'package:rasterization/src/widgets/input_point_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/home_bloc.dart';
+import '../entity/polygon.dart';
+import '../entity/polygon_vertex_form_entity.dart';
+import '../entity/ppoint.dart';
+import 'control_button_widget.dart';
+import 'input_point_widget.dart';
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
