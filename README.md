@@ -1,16 +1,29 @@
-# rasterization
+# How to use
 
-A new Flutter project.
+- Install git
 
-## Getting Started
+- Install flutter and requirements for desktop development
 
-This project is a starting point for a Flutter application.
+- Clone this repository
+```bash
+git clone https://github.com/jbrenorv/rasterization.git
+```
 
-A few resources to get you started if this is your first Flutter project:
+- Enter the project folder
+```bash
+cd rasterization
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Get flutter packages
+```bash
+flutter pub get
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Run the application. The device can be linux, windows or macos
+```bash
+flutter run -d <device>
+```
+
+<br><br>
+
+![Example](https://drive.google.com/uc?id=1VKXhO1ObrsYVZwxtH5dG8fp0IJA-mFtw)
