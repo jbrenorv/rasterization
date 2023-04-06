@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:image/image.dart';
 
 import '../entity/ppoint.dart';
@@ -9,6 +7,10 @@ class RasterizationUtil {
 
   int getReflectedY(int y, int height) => height - y - 1;
 
+  bool _isValid(int x, int y, int w, int h) {
+    return (0 <= x && x < w && 0 <= y && y < h);
+  }
+
   void drawPixel(
     Image image,
     int x,
@@ -17,9 +19,9 @@ class RasterizationUtil {
     Color? color,
     bool reflectY = true,
   }) {
+    if (!_isValid(x, y, image.width, image.height)) return;
+
     color ??= ColorInt8.rgb(255, 255, 255);
-    y = max(min(y, image.height - 1), 0);
-    x = max(min(x, image.width - 1), 0);
 
     if (reflectY) {
       image.setPixel(x, getReflectedY(y, image.height), color);
