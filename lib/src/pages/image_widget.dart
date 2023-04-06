@@ -36,7 +36,10 @@ class _ImageWidgetState extends State<ImageWidget> {
       return const Center(child: CircularProgressIndicator());
     }
 
-    return Image.memory(bytes!);
+    return Image.memory(
+      bytes!,
+      fit: BoxFit.contain,
+    );
   }
 
   @override
