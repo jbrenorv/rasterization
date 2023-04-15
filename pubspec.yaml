@@ -17,15 +17,14 @@ dependencies:
   flutter_bloc: ^8.1.2
   bloc: ^8.1.1
   flutter_colorpicker: ^1.0.3
-  file_picker: ^5.2.9
   url_launcher: ^6.1.10
   path_provider: ^2.0.14
+  path: ^1.8.2
 
   window_size:
     git:
       url: https://github.com/google/flutter-desktop-embedding
       path: plugins/window_size
-  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:
