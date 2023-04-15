@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../widgets/polygon_form_widget.dart';
-import '../widgets/segment_form_widget.dart';
-import '../widgets/settings_widget.dart';
+import 'polygon_form_widget.dart';
+import 'segment_form_widget.dart';
+import 'settings_widget.dart';
 
 class FormWrapperWidget extends StatefulWidget {
   const FormWrapperWidget({super.key});

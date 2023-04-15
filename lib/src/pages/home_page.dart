@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'form_wrapper_widget.dart';
-import 'image_control_widget.dart';
-import 'image_widget.dart';
+import '../widgets/form_wrapper_widget.dart';
+import '../widgets/image_control_widget.dart';
+import '../widgets/image_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

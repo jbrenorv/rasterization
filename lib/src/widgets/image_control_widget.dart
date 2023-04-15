@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/home_bloc.dart';
-import '../widgets/control_button_widget.dart';
+import 'control_button_widget.dart';
 
 class ImageControlWidget extends StatefulWidget {
   const ImageControlWidget({super.key});
