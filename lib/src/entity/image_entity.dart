@@ -68,4 +68,37 @@ class ImageEntity {
   int get nObjects => segments.length + polygons.length;
   int get nSegments => segments.length;
   int get nPolygons => polygons.length;
+
+  String getModelContent() {
+    var result = StringBuffer();
+
+    result.writeln('resolucao: $resolution');
+    result.writeln();
+
+    if (segments.isEmpty) {
+      result.writeln('segmentos: []');
+    } else {
+      result.writeln('segmentos:');
+      result.writeln('[');
+      for (var segment in segments) {
+        result.writeln('\t$segment');
+      }
+      result.writeln(']');
+    }
+    result.writeln();
+
+    if (polygons.isEmpty) {
+      result.writeln('poligonos: []');
+    } else {
+      result.writeln('poligonos:');
+      result.writeln('[');
+      for (var polygon in polygons) {
+        result.writeln('\t$polygon');
+      }
+      result.writeln(']');
+    }
+    result.writeln();
+
+    return result.toString();
+  }
 }

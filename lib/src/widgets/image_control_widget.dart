@@ -17,7 +17,9 @@ class _ImageControlWidgetState extends State<ImageControlWidget> {
     context.read<HomeBloc>().clear();
   }
 
-  void _undo() {}
+  void _save() {
+    context.read<HomeBloc>().saveData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +32,9 @@ class _ImageControlWidgetState extends State<ImageControlWidget> {
           tooltipMessage: 'Limpar',
         ),
         ControlButtonWidget(
-          onPressed: _undo,
-          iconData: Icons.undo_rounded,
-          tooltipMessage: 'Desfazer',
+          onPressed: _save,
+          iconData: Icons.download,
+          tooltipMessage: 'Salvar',
         ),
       ],
     );

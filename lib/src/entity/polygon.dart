@@ -35,4 +35,7 @@ class Polygon {
       order ?? this.order,
     );
   }
+
+  @override
+  String toString() => vertices.toString();
 }

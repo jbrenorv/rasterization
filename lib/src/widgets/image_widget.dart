@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/foundation.dart';
 
+import '../utils/save_data_util.dart';
 import '../bloc/home_bloc.dart';
 import '../utils/encode_image_util.dart';
 import '../entity/image_entity.dart';
@@ -28,6 +29,11 @@ class _ImageWidgetState extends State<ImageWidget> {
   }
 
   void _onHomeStateChange(BuildContext context, HomeState state) {
+    if (state.saveData) {
+      SaveDataUtil.saveData(bytes!, state.imageEntity.getModelContent());
+      return;
+    }
+
     _updateImage(state.imageEntity);
   }
 
@@ -47,7 +53,7 @@ class _ImageWidgetState extends State<ImageWidget> {
     return BlocConsumer<HomeBloc, HomeState>(
       listener: _onHomeStateChange,
       builder: _buildFromState,
-      listenWhen: (previous, current) => (previous.loading != current.loading && current.loading),
+      listenWhen: (previous, current) => (previous.loading != current.loading && current.loading) || current.saveData,
       buildWhen: (previous, current) => (previous.loading != current.loading),
     );
   }

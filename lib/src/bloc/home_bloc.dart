@@ -11,12 +11,14 @@ class HomeState {
   final ImageEntity imageEntity;
   final int currentNumberOfVertices;
   final int order;
+  final bool saveData;
 
   HomeState({
     this.loading = true,
     this.imageEntity = const ImageEntity(),
     this.currentNumberOfVertices = 3,
     this.order = 0,
+    this.saveData = false,
   });
 }
 
@@ -82,18 +84,21 @@ class HomeBloc extends Cubit<HomeState> {
     _updateState(loading: true, imageEntity: imageEntity, order: state.order + 1);
   }
 
+  void saveData() => _updateState(saveData: true);
 
   void _updateState({
     bool? loading,
     ImageEntity? imageEntity,
     int? currentNumberOfVertices,
     int? order,
+    bool? saveData,
   }) {
     emit(HomeState(
       loading: loading ?? state.loading,
       imageEntity: imageEntity ?? state.imageEntity,
       currentNumberOfVertices: currentNumberOfVertices ?? state.currentNumberOfVertices,
       order: order ?? state.order,
+      saveData: saveData ?? false,
     ));
   }
 }

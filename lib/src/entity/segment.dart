@@ -42,5 +42,5 @@ class Segment {
   }
 
   @override
-  String toString() => '($a -> $b)';
+  String toString() => '[$a, $b]';
 }
