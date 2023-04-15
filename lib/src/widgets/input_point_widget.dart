@@ -19,7 +19,10 @@ class InputPointWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(pointId),
+        SizedBox(
+          width: 20,
+          child: Text(pointId),
+        ),
         const SizedBox(width: 4.0),
         InputCoordinateWidget(controller: xController),
         InputCoordinateWidget(hintText: 'y', controller: yController),

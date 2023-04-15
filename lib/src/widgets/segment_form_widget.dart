@@ -15,10 +15,10 @@ class SegmentFormWidget extends StatefulWidget {
 }
 
 class _SegmentFormWidgetState extends State<SegmentFormWidget> {
-  final axController = TextEditingController();
-  final ayController = TextEditingController();
-  final bxController = TextEditingController();
-  final byController = TextEditingController();
+  static final axController = TextEditingController();
+  static final ayController = TextEditingController();
+  static final bxController = TextEditingController();
+  static final byController = TextEditingController();
 
   bool _isValid() {
     return (

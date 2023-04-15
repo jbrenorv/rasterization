@@ -9,6 +9,14 @@ import 'control_button_widget.dart';
 import 'input_point_widget.dart';
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+final List<PolygonVertexFormEntity> inputVertices = List.generate(
+  26,
+  (i) => PolygonVertexFormEntity(
+    alphabet[i],
+    TextEditingController(),
+    TextEditingController(),
+  ),
+);
 
 class PolygonFormWidget extends StatefulWidget {
   const PolygonFormWidget({super.key});
@@ -18,15 +26,7 @@ class PolygonFormWidget extends StatefulWidget {
 }
 
 class _PolygonFormWidgetState extends State<PolygonFormWidget> {
-  final _scrollCtrl = ScrollController();
-  final List<PolygonVertexFormEntity> inputVertices = List.generate(
-    26,
-    (i) => PolygonVertexFormEntity(
-      alphabet[i],
-      TextEditingController(),
-      TextEditingController(),
-    ),
-  );
+  final _scrollCtrl = ScrollController();  
 
   bool _isValid(int nVertices) {
     bool result = true;
