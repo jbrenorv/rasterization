@@ -23,7 +23,3 @@ flutter pub get
 ```bash
 flutter run -d <device>
 ```
-
-<br><br>
-
-![Example](https://drive.google.com/uc?id=1VKXhO1ObrsYVZwxtH5dG8fp0IJA-mFtw)
